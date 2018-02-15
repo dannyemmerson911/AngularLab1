@@ -4,17 +4,8 @@
 			list: "<"
 		},
 		
-		template:
-				`
-				<input id = "searchBar" type="text" ng-model="searchBar" placeholder="Filter your to-dos">
-				<ol>
-				<li ng-repeat="task in $ctrl.list"| filter: 'searchBar' | orderBy: 'ol' track by $index> 
-				{{task.task}}
-				<span><i class="material-icons" ng-click="$ctrl.remove($index)">close</i></span>
-				</li>
-				</ol>
-				`,
-
+		templateUrl: "partials/list.template.html",
+		
 		controller: function(){
 			var $ctrl = this;
 			$ctrl.remove = function(index){
