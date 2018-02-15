@@ -3,9 +3,9 @@ head, body {
 	background: linear-gradient(to right, #f857a6, #ff5858);
 	height: auto;
 	width: auto;
-	padding: 5%;
-	padding-bottom: 15%;
+	justify-content: center;
 	font-family: 'Open Sans', sans-serif;
+	padding-top: 50px;
 }
 
 h1, h3 {
@@ -20,7 +20,7 @@ h1 {
 }
 
 
-input, button, #searchBar {
+input {
 	height:45px;
 	width: 100%;
 	border-radius: 5px;
@@ -29,6 +29,8 @@ input, button, #searchBar {
 	opacity: 0.9;
 	padding-left: 5px;
 }
+
+
 
 
 
@@ -48,7 +50,7 @@ button:hover{
 
 .mainWrapper{
 	height: 100%;
-	width: 400px;
+	width: 410px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -97,6 +99,7 @@ i:hover {
 	width: 90%;
 	margin: auto;
 	margin-top: 25px;
+	margin-left: 20px;
 }
 
 form {
