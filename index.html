@@ -7,30 +7,21 @@
 	initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
 </head>
 
 <body>
-	<div class="mainWrapper" ng-controller="FormController as form">
-		<h1>TO-DO List</h1>
-		<h3>The neat app that keeps track</h3>
-		<input id = "searchBar" type="text" ng-model="searchFilter" placeholder="Filter your to-dos">
-		<ol>
-			<li ng-repeat="task in form.toDoList | filter: searchFilter | orderBy: 'ol' track by $index">
-			{{ task.task }} 
-			<span><i class="material-icons" ng-click="form.remove($index)">close</i></span>
-			</li>
-		</ol>
-		<form ng-submit="form.add(form.task);">
-			<input id="taskInput" type="text" placeholder="Add your to-do" ng-model="form.task">
-			<button>Add</button>
-		</form>
-	</div>
+
+	<task-form></task-form>
+	
+
+
+
 
 <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>		
 <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
 <script type="text/javascript" src="module.js"></script>
-<script type="text/javascript" src="controller.js"></script>
+<script type="text/javascript" src="components/taskForm.component.js"></script>
+<script type="text/javascript" src="components/taskList.component.js"></script>
 
 </body>
 </html>
