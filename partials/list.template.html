@@ -1,6 +1,6 @@
 	<input id = "searchBar" type="text" ng-model="searchBar" placeholder="Filter your to-dos">
 	<ol>
-		<li hover-state ng-repeat="task in $ctrl.list | filter:searchBar track by $index"> 
+		<li ng-repeat="task in $ctrl.list | filter:searchBar track by $index" hover-state> 
 		{{task.task}}
 		<span><i class="material-icons" ng-click="$ctrl.remove($index)">close</i></span>
 		</li>
