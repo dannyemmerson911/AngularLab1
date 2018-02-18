@@ -1,7 +1,13 @@
 <div class="mainWrapper">
 		<h1>TO-DO List</h1>
 		<h3>The neat app that keeps track</h3>
-		<task-list list="$ctrl.list"></task-list>
+		<input id = "searchBar" type="text" ng-model="searchBar" placeholder="Filter your to-dos">
+		<ol>
+			<li ng-repeat="task in $ctrl.list | filter:searchBar track by $index" hover-state> 
+			{{task}}
+			<span><i class="material-icons" ng-click="$ctrl.remove($index)">close</i></span>
+			</li>
+		</ol>
 		<form >
 			<input id="taskInput" type="text" placeholder="Add your to-do" ng-model="$ctrl.task">
 			<button ng-click="$ctrl.add($ctrl.task);">Add</button>
