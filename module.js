@@ -1,4 +1,4 @@
 (function(){
 	angular
-		.module("AppModule", []);
+		.module("AppModule", ["ngRoute"])
 })(); 

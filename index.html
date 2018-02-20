@@ -7,18 +7,22 @@
 	initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
 	
-	<task-form></task-form>
-	
+	<ng-view></ng-view>
+
 <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>		
 <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
-<script type="text/javascript" src="module.js"></script>
-<script type="text/javascript" src="components/taskForm.component.js"></script>
-<script type="text/javascript" src="hover_directive.js"></script>
-<script src = "service.js"></script>
+<script src = "https://code.angularjs.org/1.6.7/angular-route.js"></script>
+<script src = "module.js"></script>
+<script src = "config.js"></script>
+<script src = "components/taskForm.component.js"></script>
+<script src = "components/welcome.component.js"></script>
+<script src = "directives/hover_directive.js"></script>
+<script src = "services/service.js"></script>
 
 </body>
 </html>
